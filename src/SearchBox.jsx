@@ -9,7 +9,8 @@ export default function SearchBox({updateInfo}){
 
     const API_URL = "http://api.openweathermap.org/data/2.5/weather";
     const API_KEY = import.meta.env.VITE_API_KEY;
-
+    console.log("API Key:", API_KEY);
+    
     let getWeatherInfo = async()=>{
         try{
             let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
